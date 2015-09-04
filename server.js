@@ -19,8 +19,8 @@ var mongoUri = 'mongodb://localhost:27017/PTH';
 console.log(777, process.env)
 
 passport.use(new FacebookStrategy({
-    clientID: 855831487806174,
-    clientSecret: 'ebab77d2f0a597cabc8c0bb10cef28d6',
+    clientID: clientIDHere,
+    clientSecret: 'clientSecretHere',
     callbackURL: '/auth/facebook/callback'
   }, function(accessToken, refreshToken, profile, done) {
     userCtrl.create(profile, done);
